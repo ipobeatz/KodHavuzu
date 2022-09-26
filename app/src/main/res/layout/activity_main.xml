@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3D3D3D"
+    android:background="#2B2A2A"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,4 +21,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:spanCount="2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

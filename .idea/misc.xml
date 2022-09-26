@@ -3,14 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/font/aclonica.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.22644927536231885" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21559600830078127" />
         <entry key="app/src/main/res/layout/alert_fragment.xml" value="0.20471014492753623" />
         <entry key="app/src/main/res/layout/confirm_start_popup.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/details_activity.xml" value="0.20471014492753623" />
+        <entry key="app/src/main/res/layout/double_quiz_card_layout.xml" value="0.2636802562768909" />
+        <entry key="app/src/main/res/layout/fragment_test_login_screen.xml" value="0.22644927536231885" />
         <entry key="app/src/main/res/layout/popupwindow.xml" value="0.20471014492753623" />
         <entry key="app/src/main/res/layout/recycler_row.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/single_quiz_card_layout.xml" value="0.2316159676814425" />
-        <entry key="app/src/main/res/layout/triple_quiz_card_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/single_quiz_card_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/test_login_screen_row.xml" value="0.22644927536231885" />
+        <entry key="app/src/main/res/layout/triple_quiz_card_layout.xml" value="0.33416290283203126" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2735" />
       </map>
     </option>
   </component>
@@ -19,5 +25,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.28227209561113" />
+      </ProjectState>
+    </option>
   </component>
 </project>

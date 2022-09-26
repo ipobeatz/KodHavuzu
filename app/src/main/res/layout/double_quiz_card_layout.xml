@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/doubleCardView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="fill"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="#292929"
+        android:backgroundTint="#00BCD4"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="3dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/doubleRecyclerViewTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:gravity="center"
+            android:text="example"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/doubleImageView"
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/doubleCardView2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="fill"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="84dp"
+        android:background="#292929"
+        android:backgroundTint="#00BCD4"
+        app:cardCornerRadius="70dp"
+
+        app:cardElevation="10dp"
+
+        app:cardMaxElevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/doubleCardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/doubleRecyclerViewTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:gravity="center"
+            android:text="example"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/doubleImageView2"
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

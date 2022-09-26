@@ -1,12 +1,15 @@
 package com.ibrahimcakir.kodhavuzu;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ibrahimcakir.kodhavuzu.Adapter.CustomViewPager;
-import com.ibrahimcakir.kodhavuzu.Fragments.ConfirmStartPopup;
 import com.ibrahimcakir.kodhavuzu.databinding.DetailsActivityBinding;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -27,16 +30,19 @@ public class DetailsActivity extends AppCompatActivity {
         binding.textView.setText(selectedModel.name);
         binding.imageView2.setImageResource(selectedModel.image);
 
+
     }
 
     public void example(){
 
         mAdapter = new CustomViewPager(getSupportFragmentManager(),getApplicationContext());
 
-        mAdapter.addFragment(new ConfirmStartPopup(),"yapılış");
+
 
 
     }
+
+
 }
 
 

@@ -3,18 +3,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
      android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/tripleCardView"
         android:layout_width="115dp"
-        android:layout_height="130dp"
+        android:layout_height="115dp"
         android:layout_gravity="fill"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_margin="8dp"
         android:background="#292929"
-        android:backgroundTint="#00BCD4"
+        android:backgroundTint="#1D2729"
         app:cardCornerRadius="70dp"
         app:cardElevation="10dp"
         app:cardMaxElevation="3dp"
@@ -24,21 +24,21 @@
 
         <TextView
 
-            android:id="@+id/recyclerViewTextView2"
+            android:id="@+id/tripleRecyclerViewTextView"
             android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="88dp"
             android:gravity="center"
             android:text="example"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="82dp"
-            android:layout_height="83dp"
+            android:id="@+id/tripleImageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             app:srcCompat="@drawable/ic_launcher_background" />
@@ -47,13 +47,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="120dp"
-        android:layout_height="130dp"
+        android:id="@+id/tripleCardView2"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         android:layout_gravity="fill"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-
+        android:layout_margin="8dp"
         android:background="#292929"
         android:backgroundTint="#00BCD4"
         app:cardCornerRadius="70dp"
@@ -61,27 +59,25 @@
         app:cardMaxElevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/cardView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/recyclerViewTextView3"
+            android:id="@+id/tripleRecyclerViewTextView2"
             android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="88dp"
             android:gravity="center"
             android:text="example"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="82dp"
-            android:layout_height="83dp"
+            android:id="@+id/tripleImageView2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             app:srcCompat="@drawable/ic_launcher_background" />
@@ -89,12 +85,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="120dp"
-        android:layout_height="130dp"
+        android:id="@+id/tripleCardView3"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         android:layout_gravity="fill"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_margin="8dp"
         android:background="#292929"
         android:backgroundTint="#00BCD4"
         app:cardCornerRadius="70dp"
@@ -102,27 +97,24 @@
         app:cardMaxElevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/cardView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/recyclerViewTextView4"
+            android:id="@+id/tripleRecyclerViewTextView3"
             android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="88dp"
             android:gravity="center"
             android:text="example"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="82dp"
-            android:layout_height="83dp"
+            android:id="@+id/tripleImageView3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             app:srcCompat="@drawable/ic_launcher_background" />
