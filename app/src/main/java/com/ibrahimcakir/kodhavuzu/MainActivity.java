@@ -1,18 +1,16 @@
 package com.ibrahimcakir.kodhavuzu;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.ibrahimcakir.kodhavuzu.Adapter.QuizListAdapter;
+import com.ibrahimcakir.kodhavuzu.Model.Model;
 import com.ibrahimcakir.kodhavuzu.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
@@ -20,7 +18,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     public CardView cardView;
     public Button recyclerButton;
-    ArrayList adapterArrayList = new ArrayList<Model>();
+    ArrayList adapterArrayList = new ArrayList<>();
+  //  ArrayList friends = new ArrayList<>();
+
     private ActivityMainBinding binding;
     private Button btnShowDialog;
 
@@ -34,27 +34,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
 
-        cardView = findViewById(R.id.singleCardView);
+        findViewById(R.id.singleImageView);
 
 
-        Model degiskenler = new Model("değişkenler", R.drawable.inter);
-        Model Veritipleri = new Model("Veri tipleri", R.drawable.mojito);
-        Model Operatörler = new Model("Operatörler", R.drawable.mojito);
+      //  String[] adapterList = {"asdfa","sfgdfh","erydgh"};
+
+      //  ArrayList<List> list = new ArrayList<List>(adapterArrayList);
+
+        Model Veritipleri = new Model("Veri tipleri", R.drawable.kirmizi);
+        Model Operatörler = new Model("Operatörler", R.drawable.yesil);
         Model Sınıflar = new Model("Sınıflar", R.drawable.mojito);
-        Model Mantıksalveritipleri = new Model("Mantıksal veri tipleri", R.drawable.mojito);
+
         Model Koşullar = new Model("Koşullar", R.drawable.mojito);
         Model Diziler = new Model("Diziler", R.drawable.mojito);
         Model Methotlar = new Model("Methotlar", R.drawable.mojito);
 
+        ArrayList sınıflar = new ArrayList(adapterArrayList);
 
-        adapterArrayList.add(degiskenler);
+
+        //friends = new ArrayList<String>(Arrays.asList(adapterList));
+
         adapterArrayList.add(Veritipleri);
         adapterArrayList.add(Operatörler);
         adapterArrayList.add(Sınıflar);
-        adapterArrayList.add(Mantıksalveritipleri);
+
         adapterArrayList.add(Koşullar);
         adapterArrayList.add(Diziler);
         adapterArrayList.add(Methotlar);
+      //  friends.add(adapterList);
+
 
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));

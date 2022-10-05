@@ -12,8 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ibrahimcakir.kodhavuzu.DetailsActivity;
 import com.ibrahimcakir.kodhavuzu.LoginScreen;
-import com.ibrahimcakir.kodhavuzu.MainActivity;
-import com.ibrahimcakir.kodhavuzu.Model;
+import com.ibrahimcakir.kodhavuzu.Model.Model;
 import com.ibrahimcakir.kodhavuzu.Singleton;
 import com.ibrahimcakir.kodhavuzu.databinding.DoubleQuizCardLayoutBinding;
 import com.ibrahimcakir.kodhavuzu.databinding.SingleQuizCardLayoutBinding;
@@ -26,16 +25,22 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
     final Integer singleItemViewType = 1000;
     final Integer doubleItemViewType = 1001;
     final Integer tripleItemViewType = 1002;
+    ArrayList alist;
+
+
 
     public QuizListAdapter(ArrayList<Model> AdapterArrayList) {
         this.AdapterArrayList = AdapterArrayList;
     }
+
     @NonNull
     @Override
     public RecyclerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == singleItemViewType) {
             SingleQuizCardLayoutBinding recyclerRowBinding = SingleQuizCardLayoutBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
             return new RecyclerHolder(recyclerRowBinding);
+
+
         }
         else if (viewType == doubleItemViewType){
             DoubleQuizCardLayoutBinding recyclerRowBinding = DoubleQuizCardLayoutBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
@@ -47,6 +52,7 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
             return new RecyclerHolder(recyclerRowBinding);
         }
         return null;
+
     }
 
 
@@ -55,26 +61,32 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
 
         if (holder.getItemViewType() == singleItemViewType) {
 
+
+
             holder.singleBinding.singleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
             holder.singleBinding.singleImageView.setImageResource(AdapterArrayList.get(position).image);
 
-            holder.singleBinding.singleCardView.setOnClickListener(view -> {
+            holder.singleBinding.singleImageView.setOnClickListener(view -> {
                 showAlertDialog(holder.itemView.getContext());
             });
         }
 
         else if (holder.getItemViewType() == doubleItemViewType) {
             holder.doubleBinding.doubleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
-            holder.doubleBinding.doubleImageView.setImageResource(AdapterArrayList.get(position).image);
+            holder.doubleBinding.doubleRecyclerViewTextView2.setText(AdapterArrayList.get(position).name);
 
-            holder.doubleBinding.doubleCardView.setOnClickListener(view -> {
+            holder.doubleBinding.doubleImageView.setImageResource(AdapterArrayList.get(position).image);
+            holder.doubleBinding.doubleImageView2.setImageResource(AdapterArrayList.get(position).image);
+
+            holder.doubleBinding.doubleImageView.setOnClickListener(view -> {
                 Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
                 Singleton singleton = Singleton.getInstance();
                 singleton.setChosenModel(AdapterArrayList.get(position));
                 holder.itemView.getContext().startActivity(intent);
             });
+//bura eklendi
 
-            holder.doubleBinding.doubleCardView2.setOnClickListener(view -> {
+            holder.doubleBinding.doubleImageView2.setOnClickListener(view -> {
                 Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
                 Singleton singleton = Singleton.getInstance();
                 singleton.setChosenModel(AdapterArrayList.get(position));
@@ -85,6 +97,12 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
             holder.tripleBinding.tripleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
             holder.tripleBinding.tripleImageView.setImageResource(AdapterArrayList.get(position).image);
 
+            holder.tripleBinding.tripleRecyclerViewTextView2.setText(AdapterArrayList.get(position).name);
+            holder.tripleBinding.tripleImageView2.setImageResource(AdapterArrayList.get(position).image);
+
+            holder.tripleBinding.tripleRecyclerViewTextView3.setText(AdapterArrayList.get(position).name);
+            holder.tripleBinding.tripleImageView3.setImageResource(AdapterArrayList.get(position).image);
+
             holder.tripleBinding.tripleImageView.setOnClickListener(view -> {
                 Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
                 Singleton singleton = Singleton.getInstance();
@@ -92,7 +110,21 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
                 holder.itemView.getContext().startActivity(intent);
             });
 
-            holder.tripleBinding.tripleCardView.setOnClickListener(view -> {
+            holder.tripleBinding.tripleImageView.setOnClickListener(view -> {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+                Singleton singleton = Singleton.getInstance();
+                singleton.setChosenModel(AdapterArrayList.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            });
+
+            holder.tripleBinding.tripleImageView2.setOnClickListener(view -> {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+                Singleton singleton = Singleton.getInstance();
+                singleton.setChosenModel(AdapterArrayList.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            });
+
+            holder.tripleBinding.tripleImageView3.setOnClickListener(view -> {
                 Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
                 Singleton singleton = Singleton.getInstance();
                 singleton.setChosenModel(AdapterArrayList.get(position));

@@ -1,4 +1,4 @@
-package com.ibrahimcakir.kodhavuzu;
+package com.ibrahimcakir.kodhavuzu.Model;
 
 import java.io.Serializable;
 import java.util.List;

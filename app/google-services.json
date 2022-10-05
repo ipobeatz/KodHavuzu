@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1074832254135",
+    "project_id": "kod-havuzu",
+    "storage_bucket": "kod-havuzu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074832254135:android:c6572b0c4eb56912361932",
+        "android_client_info": {
+          "package_name": "com.ibrahimcakir.kodhavuzu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074832254135-tf46jnd0fvgd76i01jt9h367gpi9ljcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM7ZY5DmVZO_k3MJKyYW1281kgCQdHduk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074832254135-tf46jnd0fvgd76i01jt9h367gpi9ljcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

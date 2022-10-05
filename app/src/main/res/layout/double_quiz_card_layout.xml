@@ -6,84 +6,63 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/doubleCardView"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="fill"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="#292929"
-        android:backgroundTint="#00BCD4"
-        app:cardCornerRadius="70dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="3dp"
 
+    <TextView
+        android:id="@+id/doubleRecyclerViewTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="128dp"
+        android:gravity="center"
+        android:text="example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/doubleImageView"
+        android:layout_width="111dp"
+        android:layout_height="103dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/doubleImageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/doubleRecyclerViewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="108dp"
+        android:gravity="center"
+        android:text="example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/doubleImageView" />
+
+    <ImageView
+        android:id="@+id/doubleImageView2"
+        android:layout_width="111dp"
+        android:layout_height="103dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="88dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toEndOf="@+id/doubleImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
-        <TextView
-            android:id="@+id/doubleRecyclerViewTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
-            android:gravity="center"
-            android:text="example"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/doubleImageView"
-            android:layout_width="79dp"
-            android:layout_height="79dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/doubleCardView2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="fill"
-        android:layout_margin="10dp"
-        android:layout_marginEnd="84dp"
-        android:background="#292929"
-        android:backgroundTint="#00BCD4"
-        app:cardCornerRadius="70dp"
-
-        app:cardElevation="10dp"
-
-        app:cardMaxElevation="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/doubleCardView"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/doubleRecyclerViewTextView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
-            android:gravity="center"
-            android:text="example"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/doubleImageView2"
-            android:layout_width="79dp"
-            android:layout_height="79dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="170dp">
+    <ImageView
+        android:id="@+id/singleImageView"
+        android:layout_width="127dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/singleRecyclerViewTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/singleCardView"
-        android:layout_width="145dp"
-        android:layout_height="145dp"
-        android:layout_gravity="fill"
-        android:layout_marginBottom="8dp"
-        android:background="#292929"
-        android:backgroundTint="#3A5B60"
-        app:cardCornerRadius="70dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="3dp"
+    <TextView
+
+        android:id="@+id/singleRecyclerViewTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kodhavuzutextfont"
+        android:gravity="center"
+        android:text="example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singleImageView" />
 
-        <ImageView
-            android:id="@+id/singleImageView"
-            android:layout_width="127dp"
-            android:layout_height="126dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_launcher_background" />
-
-        <TextView
-
-            android:id="@+id/singleRecyclerViewTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="108dp"
-            android:fontFamily="@font/kodhavuzutextfont"
-            android:gravity="center"
-            android:text="example"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

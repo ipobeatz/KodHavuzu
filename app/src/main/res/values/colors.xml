@@ -8,4 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="patota">#DA7373</color>
+    <color name="colorPrimary">#ffde00</color>
+    <color name="colorPrimaryDark">#fbc02d</color>
+    <color name="colorAccent">#003e9f</color>
+    <color name="bg_main">#428bca</color>
+    <color name="btn_logout_bg">#ff6861</color>
+
 </resources>

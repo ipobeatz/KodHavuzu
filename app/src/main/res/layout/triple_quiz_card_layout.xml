@@ -1,124 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-     android:layout_height="wrap_content">
+    android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tripleCardView"
-        android:layout_width="115dp"
-        android:layout_height="115dp"
-        android:layout_gravity="fill"
-        android:layout_margin="8dp"
-        android:background="#292929"
-        android:backgroundTint="#1D2729"
-        app:cardCornerRadius="70dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="3dp"
+
+    <TextView
+
+        android:id="@+id/tripleRecyclerViewTextView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:text="example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tripleRecyclerViewTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/tripleImageView3" />
+
+    <ImageView
+        android:id="@+id/tripleImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-
-            android:id="@+id/tripleRecyclerViewTextView"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="88dp"
-            android:gravity="center"
-            android:text="example"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/tripleImageView"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
 
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tripleRecyclerViewTextView2"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tripleCardView2"
-        android:layout_width="115dp"
-        android:layout_height="115dp"
-        android:layout_gravity="fill"
-        android:layout_margin="8dp"
-        android:background="#292929"
-        android:backgroundTint="#00BCD4"
-        app:cardCornerRadius="70dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="3dp"
+    <ImageView
+        android:id="@+id/tripleImageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
-        <TextView
-            android:id="@+id/tripleRecyclerViewTextView2"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="88dp"
-            android:gravity="center"
-            android:text="example"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/tripleImageView2"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/tripleCardView3"
-        android:layout_width="115dp"
-        android:layout_height="115dp"
-        android:layout_gravity="fill"
-        android:layout_margin="8dp"
-        android:background="#292929"
-        android:backgroundTint="#00BCD4"
-        app:cardCornerRadius="70dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="3dp"
+    <TextView
+        android:id="@+id/tripleRecyclerViewTextView3"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="190dp"
+        android:gravity="center"
+        android:text="example"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tripleRecyclerViewTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/tripleImageView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tripleRecyclerViewTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
-        <TextView
-            android:id="@+id/tripleRecyclerViewTextView3"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="88dp"
-            android:gravity="center"
-            android:text="example"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/tripleImageView3"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

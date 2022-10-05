@@ -1,5 +1,7 @@
 package com.ibrahimcakir.kodhavuzu;
 
+import com.ibrahimcakir.kodhavuzu.Model.Model;
+
 public class Singleton {
     private static Singleton singleton;
     private Model selectedModel;
