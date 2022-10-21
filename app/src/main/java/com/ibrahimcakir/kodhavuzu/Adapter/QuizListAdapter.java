@@ -6,32 +6,47 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ibrahimcakir.kodhavuzu.DetailsActivity;
-import com.ibrahimcakir.kodhavuzu.LoginScreen;
 import com.ibrahimcakir.kodhavuzu.Model.Model;
+import com.ibrahimcakir.kodhavuzu.R;
 import com.ibrahimcakir.kodhavuzu.Singleton;
+import com.ibrahimcakir.kodhavuzu.TestDetailFragment;
+import com.ibrahimcakir.kodhavuzu.TestScreen;
 import com.ibrahimcakir.kodhavuzu.databinding.DoubleQuizCardLayoutBinding;
 import com.ibrahimcakir.kodhavuzu.databinding.SingleQuizCardLayoutBinding;
+import com.ibrahimcakir.kodhavuzu.databinding.TestDetailRowBinding;
 import com.ibrahimcakir.kodhavuzu.databinding.TripleQuizCardLayoutBinding;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 
 public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.RecyclerHolder> {
+
+
+
     ArrayList<Model> AdapterArrayList;
+    ArrayList adapterArrayList;
     final Integer singleItemViewType = 1000;
     final Integer doubleItemViewType = 1001;
     final Integer tripleItemViewType = 1002;
-    ArrayList alist;
+    FragmentManager manager;
+
 
 
 
     public QuizListAdapter(ArrayList<Model> AdapterArrayList) {
         this.AdapterArrayList = AdapterArrayList;
+
     }
+
 
     @NonNull
     @Override
@@ -61,28 +76,28 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
 
         if (holder.getItemViewType() == singleItemViewType) {
 
-
-
             holder.singleBinding.singleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
             holder.singleBinding.singleImageView.setImageResource(AdapterArrayList.get(position).image);
-
             holder.singleBinding.singleImageView.setOnClickListener(view -> {
+
                 showAlertDialog(holder.itemView.getContext());
             });
         }
 
-        else if (holder.getItemViewType() == doubleItemViewType) {
-            holder.doubleBinding.doubleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
-            holder.doubleBinding.doubleRecyclerViewTextView2.setText(AdapterArrayList.get(position).name);
 
-            holder.doubleBinding.doubleImageView.setImageResource(AdapterArrayList.get(position).image);
-            holder.doubleBinding.doubleImageView2.setImageResource(AdapterArrayList.get(position).image);
+        else if (holder.getItemViewType() == doubleItemViewType) {
+            holder.doubleBinding.doubleRecyclerViewTextView.setText(AdapterArrayList.get(position).itemsNameList.get(0));
+            holder.doubleBinding.doubleRecyclerViewTextView2.setText(AdapterArrayList.get(position).itemsNameList.get(1));
+
+            holder.doubleBinding.doubleImageView.setImageResource(AdapterArrayList.get(position).itemsImageList.get(0));
+            holder.doubleBinding.doubleImageView2.setImageResource(AdapterArrayList.get(position).itemsImageList.get(1));
 
             holder.doubleBinding.doubleImageView.setOnClickListener(view -> {
-                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+                Intent intent = new Intent(holder.itemView.getContext(),  TestDetailFragment.class);
                 Singleton singleton = Singleton.getInstance();
                 singleton.setChosenModel(AdapterArrayList.get(position));
                 holder.itemView.getContext().startActivity(intent);
+
             });
 //bura eklendi
 
@@ -94,14 +109,14 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
             });
         }
         else if (holder.getItemViewType() == tripleItemViewType) {
-            holder.tripleBinding.tripleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
-            holder.tripleBinding.tripleImageView.setImageResource(AdapterArrayList.get(position).image);
+            holder.tripleBinding.tripleRecyclerViewTextView.setText(AdapterArrayList.get(position).itemsNameList.get(2));
+            holder.tripleBinding.tripleImageView.setImageResource(AdapterArrayList.get(position).itemsImageList.get(3));
 
-            holder.tripleBinding.tripleRecyclerViewTextView2.setText(AdapterArrayList.get(position).name);
-            holder.tripleBinding.tripleImageView2.setImageResource(AdapterArrayList.get(position).image);
+            holder.tripleBinding.tripleRecyclerViewTextView2.setText(AdapterArrayList.get(position).itemsNameList.get(1));
+            holder.tripleBinding.tripleImageView2.setImageResource(AdapterArrayList.get(position).itemsImageList.get(4));
 
-            holder.tripleBinding.tripleRecyclerViewTextView3.setText(AdapterArrayList.get(position).name);
-            holder.tripleBinding.tripleImageView3.setImageResource(AdapterArrayList.get(position).image);
+            holder.tripleBinding.tripleRecyclerViewTextView3.setText(AdapterArrayList.get(position).itemsNameList.get(0));
+            holder.tripleBinding.tripleImageView3.setImageResource(AdapterArrayList.get(position).itemsImageList.get(5));
 
             holder.tripleBinding.tripleImageView.setOnClickListener(view -> {
                 Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
@@ -110,11 +125,13 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
                 holder.itemView.getContext().startActivity(intent);
             });
 
+
             holder.tripleBinding.tripleImageView.setOnClickListener(view -> {
-                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+                Intent intent = new Intent(holder.itemView.getContext(), TestScreen.class);
                 Singleton singleton = Singleton.getInstance();
                 singleton.setChosenModel(AdapterArrayList.get(position));
                 holder.itemView.getContext().startActivity(intent);
+
             });
 
             holder.tripleBinding.tripleImageView2.setOnClickListener(view -> {
@@ -130,8 +147,13 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
                 singleton.setChosenModel(AdapterArrayList.get(position));
                 holder.itemView.getContext().startActivity(intent);
             });
+
         }
     }
+
+
+
+
     @Override
     public int getItemCount() {
         return AdapterArrayList.size();
@@ -181,7 +203,7 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
 
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(context, LoginScreen.class);
+                        Intent intent = new Intent(context, TestScreen.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
 

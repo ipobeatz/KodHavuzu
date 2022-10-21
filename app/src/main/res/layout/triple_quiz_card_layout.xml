@@ -10,17 +10,17 @@
     <TextView
 
         android:id="@+id/tripleRecyclerViewTextView"
-        android:layout_width="0dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:text="example"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tripleRecyclerViewTextView3"
+        app:layout_constraintStart_toEndOf="@+id/tripleImageView2"
         app:layout_constraintTop_toBottomOf="@+id/tripleImageView3" />
 
     <ImageView
@@ -28,64 +28,63 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 
-
     <TextView
         android:id="@+id/tripleRecyclerViewTextView2"
-        android:layout_width="110dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="example"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tripleRecyclerViewTextView"
+        app:layout_constraintStart_toEndOf="@+id/tripleRecyclerViewTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/tripleImageView2" />
 
     <ImageView
         android:id="@+id/tripleImageView2"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/tripleRecyclerViewTextView3"
-        android:layout_width="110dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
-        android:layout_marginEnd="190dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="18dp"
         android:gravity="center"
         android:text="example"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tripleRecyclerViewTextView"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripleImageView" />
 
     <ImageView
         android:id="@+id/tripleImageView3"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/tripleRecyclerViewTextView"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/tripleImageView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424"
         app:srcCompat="@drawable/ic_launcher_background" />
 
 

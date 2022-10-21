@@ -61,6 +61,7 @@ public class TestScreen extends AppCompatActivity {
         nextQuestions = findViewById(R.id.nextQuestions);
         saveButton = findViewById(R.id.saveButton);
         backButton = findViewById(R.id.backButton);
+        setListeners();
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,5 +197,46 @@ public class TestScreen extends AppCompatActivity {
     public void updateData(int position) {
         QuestionsModel question1 = new QuestionsModel();
         question1 = ques.get(position-1);
+    }
+
+
+    private void setListeners() {
+        aRadio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedOption = "A";
+                bRadio.setChecked(false);
+                cRadio.setChecked(false);
+                dRadio.setChecked(false);
+            }
+        });
+        bRadio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedOption = "B";
+                aRadio.setChecked(false);
+                cRadio.setChecked(false);
+                dRadio.setChecked(false);
+            }
+        });
+        cRadio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedOption = "C";
+                bRadio.setChecked(false);
+                aRadio.setChecked(false);
+                dRadio.setChecked(false);
+            }
+        });
+        dRadio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedOption = "D";
+                bRadio.setChecked(false);
+                cRadio.setChecked(false);
+                aRadio.setChecked(false);
+            }
+        });
+
     }
             }

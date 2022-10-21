@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
         binding = DetailsActivityBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        example();
+
 
         Model selectedModel = singleton.getSelectedModel();
 
@@ -30,14 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
-    public void example(){
 
-        mAdapter = new CustomViewPager(getSupportFragmentManager(),getApplicationContext());
-
-
-
-
-    }
 
 
 }

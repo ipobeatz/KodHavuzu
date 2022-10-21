@@ -12,6 +12,6 @@
     <color name="colorPrimaryDark">#fbc02d</color>
     <color name="colorAccent">#003e9f</color>
     <color name="bg_main">#428bca</color>
-    <color name="btn_logout_bg">#ff6861</color>
+    <color name="btn_logout_bg">#F80E03</color>
 
 </resources>

@@ -12,10 +12,11 @@ public class QuestionsModel implements Serializable {
     private String answer;
 
 
+
+
     public QuestionsModel() {
 
     }
-
 
     public QuestionsModel(int id, String question, String opt_A, String opt_B, String opt_C, String opt_D, String answer) {
         this.id = id;
@@ -26,6 +27,7 @@ public class QuestionsModel implements Serializable {
         this.opt_D = opt_D;
         this.answer = answer;
     }
+
 
     public int getId() {
         return id;
@@ -82,4 +84,6 @@ public class QuestionsModel implements Serializable {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+
 }
