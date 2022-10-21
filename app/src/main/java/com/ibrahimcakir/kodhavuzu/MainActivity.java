@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         adapterArrayList.add(Koşullar);
         adapterArrayList.add(Diziler);
         adapterArrayList.add(Methotlar);
-      //  friends.add(adapterList);
+      // friends.add(adapterList);
 
 
 
