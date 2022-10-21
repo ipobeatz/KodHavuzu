@@ -54,7 +54,6 @@ public class  TestDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-
     }
 
 }
