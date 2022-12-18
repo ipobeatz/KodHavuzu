@@ -5,40 +5,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#292929"
     android:id="@+id/cardView2"
-    android:layout_width="160dp"
-    android:layout_height="155dp"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
     android:layout_gravity="fill"
-    android:layout_margin="18dp"
+    android:layout_margin="12dp"
     android:backgroundTint="#933B3B"
     app:cardCornerRadius="30dp"
     app:cardElevation="10dp"
     app:cardMaxElevation="3dp"
     tools:context=".TestDetailFragment"
-    android:onClick="aga"
 
     >
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/ic_launcher_background"
+
+        />
+
     <TextView
         android:id="@+id/recyclerViewTextView"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="90dp"
         android:gravity="center"
         android:text="example"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18sp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-
-
+        android:textSize="18sp"
         />
 
 </androidx.cardview.widget.CardView>

@@ -1,10 +1,11 @@
 package com.ibrahimcakir.kodhavuzu;
 
-import com.ibrahimcakir.kodhavuzu.Model.Model;
+import com.ibrahimcakir.kodhavuzu.Model.MainModel;
 
 public class Singleton {
     private static Singleton singleton;
-    private Model selectedModel;
+    private MainModel selectedMainModel;
+
 
     private Singleton() {
 
@@ -17,12 +18,13 @@ public class Singleton {
         return singleton;
     }
 
-    public Model getSelectedModel() {
-        return selectedModel;
+    public MainModel getSelectedModel() {
+        return selectedMainModel;
+
     }
 
-    public void setChosenModel(Model selectedModel) {
-        this.selectedModel = selectedModel;
+    public void setChosenModel(MainModel selectedMainModel) {
+        this.selectedMainModel = selectedMainModel;
     }
 
 }

@@ -1,21 +1,23 @@
 package com.ibrahimcakir.kodhavuzu.Adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ibrahimcakir.kodhavuzu.Model.Model;
-import com.ibrahimcakir.kodhavuzu.databinding.FragmentTestDetailBinding;
+import com.ibrahimcakir.kodhavuzu.DetailsActivity;
+import com.ibrahimcakir.kodhavuzu.Model.MainModel;
+import com.ibrahimcakir.kodhavuzu.Singleton;
 import com.ibrahimcakir.kodhavuzu.databinding.TestDetailRowBinding;
 
 import java.util.ArrayList;
 
     public class TestDetailAdapter extends RecyclerView.Adapter<TestDetailAdapter.TestHolder> {
-        ArrayList<Model> DetailArrayList;
+        ArrayList<MainModel> DetailArrayList;
 
-        public TestDetailAdapter(ArrayList<Model> DetailArrayList) {
+        public TestDetailAdapter(ArrayList<MainModel> DetailArrayList) {
             this.DetailArrayList = DetailArrayList;
         }
 
@@ -29,6 +31,15 @@ import java.util.ArrayList;
         @Override
         public void onBindViewHolder(@NonNull TestHolder holder, int position) {
             holder.binding.recyclerViewTextView.setText(DetailArrayList.get(position).name);
+            holder.binding.imageView3.setImageResource(DetailArrayList.get(position).image);
+
+            holder.itemView.setOnClickListener(view -> {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+                Singleton singleton = Singleton.getInstance();
+                singleton.setChosenModel(DetailArrayList.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            });
+
 
         }
 

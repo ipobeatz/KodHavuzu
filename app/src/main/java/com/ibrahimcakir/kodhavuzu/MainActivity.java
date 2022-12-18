@@ -1,19 +1,22 @@
 package com.ibrahimcakir.kodhavuzu;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.ibrahimcakir.kodhavuzu.Adapter.QuizListAdapter;
 import com.ibrahimcakir.kodhavuzu.Adapter.TestDetailAdapter;
-import com.ibrahimcakir.kodhavuzu.Model.Model;
+import com.ibrahimcakir.kodhavuzu.Model.MainModel;
 import com.ibrahimcakir.kodhavuzu.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public Button recyclerButton;
     ArrayList adapterArrayList = new ArrayList<>();
     ArrayList detailArrayList = new ArrayList<>();
-  //  ArrayList friends = new ArrayList<>();
+    //  ArrayList friends = new ArrayList<>();
     FragmentManager manager;
 
     private ActivityMainBinding binding;
@@ -34,11 +37,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+
+
 
         manager = getSupportFragmentManager();
 
@@ -47,22 +52,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         // List<Integer> list1 = Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-            List<String> adapterList = Arrays.asList("metodlar","operatörler","diziler","koşullar");
-            List<Integer> adapterDrawableList = Arrays.asList(R.drawable.ymetodlar,
-                    R.drawable.kirmizi,
-                    R.drawable.kkosullar,
-                    R.drawable.mmetod,
-                    R.drawable.moperator,
-                    R.drawable.sdiziler);
+        List<String> adapterList = Arrays.asList("metodlar", "operatörler", "diziler", "koşullar");
+        List<Integer> adapterDrawableList = Arrays.asList(R.drawable.ymetodlar,
+                R.drawable.kirmizi,
+                R.drawable.kkosullar,
+                R.drawable.mmetod,
+                R.drawable.moperator,
+                R.drawable.sdiziler);
 
-      //  ArrayList<List> list = new ArrayList<List>(adapterArrayList);
+        //  ArrayList<List> list = new ArrayList<List>(adapterArrayList);
 
-        Model Veritipleri = new Model("Veri tipleri", R.drawable.kirmizi,adapterList,adapterDrawableList);
-        Model Operatörler = new Model("Operatörler", R.drawable.yesil,adapterList,adapterDrawableList);
-        Model Sınıflar = new Model("koşullar", R.drawable.kkosullar,adapterList,adapterDrawableList);
-        Model Koşullar = new Model("Koşullar", R.drawable.mojito,adapterList,adapterDrawableList);
-        Model Diziler = new Model("Diziler", R.drawable.sdiziler,adapterList,adapterDrawableList);
-        Model Methotlar = new Model("Methotlar", R.drawable.mojito,adapterList,adapterDrawableList);
+        MainModel Veritipleri = new MainModel("Veri tipleri", R.drawable.kirmizi, adapterList, adapterDrawableList);
+        MainModel Operatörler = new MainModel("Operatörler", R.drawable.yesil, adapterList, adapterDrawableList);
+        MainModel Sınıflar = new MainModel("koşullar", R.drawable.kkosullar, adapterList, adapterDrawableList);
+        MainModel Koşullar = new MainModel("Koşullar", R.drawable.mojito, adapterList, adapterDrawableList);
+        MainModel Diziler = new MainModel("Diziler", R.drawable.sdiziler, adapterList, adapterDrawableList);
+        MainModel Methotlar = new MainModel("Methotlar", R.drawable.mojito, adapterList, adapterDrawableList);
+
 
         ArrayList sınıflar = new ArrayList(adapterArrayList);
 
@@ -75,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
         adapterArrayList.add(Koşullar);
         adapterArrayList.add(Diziler);
         adapterArrayList.add(Methotlar);
-      // friends.add(adapterList);
-
+        // friends.add(adapterList);
 
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -86,16 +91,20 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.setLayoutManager(mLayoutManager);
 
 
-
-
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         TestDetailAdapter testDetailAdapter = new TestDetailAdapter(detailArrayList);
         binding.recyclerView.setAdapter(quizListAdapter);
         GridLayoutManager layoutManager = new GridLayoutManager((this), 1);
         binding.recyclerView.setLayoutManager(layoutManager);
+
+
     }
 
-}
+
+    }
+
+
+
 
 
 
