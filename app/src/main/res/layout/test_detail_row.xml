@@ -3,13 +3,12 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#292929"
     android:id="@+id/cardView2"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="60dp"
     android:layout_gravity="fill"
     android:layout_margin="12dp"
-    android:backgroundTint="#933B3B"
+    android:background="@drawable/custom_button"
     app:cardCornerRadius="30dp"
     app:cardElevation="10dp"
     app:cardMaxElevation="3dp"
@@ -17,29 +16,17 @@
 
     >
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-
-        />
 
     <TextView
         android:id="@+id/recyclerViewTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="90dp"
         android:gravity="center"
-        android:text="example"
+        android:background="@drawable/custom_button"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        />
+        android:textColor="@color/cardview_light_background"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </androidx.cardview.widget.CardView>
 

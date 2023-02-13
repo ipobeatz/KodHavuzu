@@ -8,15 +8,17 @@ public class MainModel implements Serializable {
     public int image;
     public List<String> itemsNameList;
     public List<Integer> itemsImageList;
+    public List items;
 
 
 
 
-    public MainModel(String name, int image, List<String> itemsNameList, List<Integer> itemsImageList) {
+    public MainModel(String name, int image, List<String> itemsNameList, List<Integer> itemsImageList,List items) {
         this.name = name;
         this.image = image;
         this.itemsNameList = itemsNameList;
         this.itemsImageList = itemsImageList;
+        this.items=items;
 
     }
 }

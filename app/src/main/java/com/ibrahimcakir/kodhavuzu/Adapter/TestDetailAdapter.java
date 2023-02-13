@@ -1,6 +1,7 @@
 package com.ibrahimcakir.kodhavuzu.Adapter;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -30,15 +31,16 @@ import java.util.ArrayList;
 
         @Override
         public void onBindViewHolder(@NonNull TestHolder holder, int position) {
-            holder.binding.recyclerViewTextView.setText(DetailArrayList.get(position).name);
-            holder.binding.imageView3.setImageResource(DetailArrayList.get(position).image);
 
-            holder.itemView.setOnClickListener(view -> {
-                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
-                Singleton singleton = Singleton.getInstance();
-                singleton.setChosenModel(DetailArrayList.get(position));
-                holder.itemView.getContext().startActivity(intent);
-            });
+            holder.binding.recyclerViewTextView.setText(DetailArrayList.get(position).name);
+
+
+//            holder.itemView.setOnClickListener(view -> {
+//                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+//                Singleton singleton = Singleton.getInstance();
+//                singleton.setChosenModel(DetailArrayList.get(position));
+//                holder.itemView.getContext().startActivity(intent);
+//            });
 
 
         }

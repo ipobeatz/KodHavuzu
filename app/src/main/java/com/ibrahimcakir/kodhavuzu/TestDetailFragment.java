@@ -6,6 +6,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,25 +26,28 @@ public class  TestDetailFragment extends Fragment {
 
     ArrayList<MainModel> adapterList = new ArrayList<>();
     Singleton singleton = Singleton.getInstance();
-
+/*
     public TestDetailFragment(List<MainModel> mainModelList) {
         adapterList.addAll(mainModelList);
     }
+
+ */
+    /*
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        FragmentTestDetailBinding binding = FragmentTestDetailBinding.inflate(inflater, container, false);
-        MainModel selectedMainModel = singleton.getSelectedModel();
-        binding.historyTextView.setText(selectedMainModel.name);
+        binding.recyclerFragment.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
+        binding.recyclerFragment.setHasFixedSize(true);
+        binding.recyclerFragment.setLayoutManager(new LinearLayoutManager(getActivity()));
+        binding.recyclerFragment.setItemAnimator(new DefaultItemAnimator());
 
-        TestDetailAdapter testDetailAdapter = new TestDetailAdapter(adapterList);
-        binding.recyclerFragment.setAdapter(testDetailAdapter);
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(adapterList);
+        binding.recyclerFragment.setAdapter(fragmentAdapter);
+
         return binding.getRoot();
-
-        // getActivity().getSupportFragmentManager().
     }
-
+*/
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

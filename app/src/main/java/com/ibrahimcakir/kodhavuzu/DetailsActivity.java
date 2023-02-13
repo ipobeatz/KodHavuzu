@@ -24,7 +24,10 @@ public class DetailsActivity extends AppCompatActivity implements NavigationView
     ArrayList adapterArrayList = new ArrayList<MainModel>();
     private DetailsActivityBinding binding;
     Singleton singleton = Singleton.getInstance();
+
     private CustomViewPager mAdapter;
+    ArrayList detailArrayList = new ArrayList<>();
+    DetailAdapter detailAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,20 +35,32 @@ public class DetailsActivity extends AppCompatActivity implements NavigationView
         View view = binding.getRoot();
         setContentView(view);
 
-        MainModel asa = new MainModel("asd",R.drawable.sdiziler,null,null);
+
+
+        MainModel asa = new MainModel("1.TEST",R.drawable.sdiziler,null,null,null);
+        MainModel asaaa = new MainModel("2.TEST",R.drawable.sdiziler,null,null,null);
+        MainModel asaasfasdf = new MainModel("3.TEST",R.drawable.sdiziler,null,null,null);
+
+        adapterArrayList.add(asaaa);
+        adapterArrayList.add(asaasfasdf);
         adapterArrayList.add(asa);
 
-        MainModel asaaa = new MainModel("asd",R.drawable.sdiziler,null,null);
-        adapterArrayList.add(asaaa);
 
-        MainModel asaasfasdf = new MainModel("asd",R.drawable.sdiziler,null,null);
-        adapterArrayList.add(asaasfasdf);
+
 
         binding.recyclername.setLayoutManager(new LinearLayoutManager(this));
-        DetailAdapter detailAdapter = new DetailAdapter(adapterArrayList);
+         detailAdapter = new DetailAdapter(adapterArrayList);
         binding.recyclername.setAdapter(detailAdapter);
+        detailAdapter.notifyDataSetChanged();
+
         GridLayoutManager mLayoutManager = new GridLayoutManager((this), 1);
         binding.recyclername.setLayoutManager(mLayoutManager);
+
+
+
+
+
+
 
     }
 

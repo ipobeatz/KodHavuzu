@@ -67,6 +67,7 @@ public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.Recycl
             holder.singleBinding.singleRecyclerViewTextView.setText(AdapterArrayList.get(position).name);
             holder.singleBinding.singleImageView.setImageResource(AdapterArrayList.get(position).image);
             holder.singleBinding.singleImageView.setOnClickListener(view -> {
+                //uyar mesajını hallet
 
                 showAlertDialog(holder.itemView.getContext());
             });
